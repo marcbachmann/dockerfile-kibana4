@@ -8,7 +8,7 @@ export SHARD_TIMEOUT=${SHARD_TIMEOUT:-30000}
 export VERIFY_SSL=${VERIFY_SSL:-true}
 
 REPLACE=(
- "s|^elasticsearch:.*$|elasticsearch: \"$ELASTICSEARCH\"|;"
+ "s|^elasticsearch_url:.*$|elasticsearch_url: \"$ELASTICSEARCH\"|;"
  "s|^kibana_index:.*$|kibana_index: \"$KIBANA_INDEX\"|;"
  "s|^default_app_id:.*$|default_app_id: \"$DEFAULT_APP_ID\"|;"
  "s|^request_timeout:.*$|request_timeout: $REQUEST_TIMEOUT|;"
