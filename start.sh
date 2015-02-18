@@ -12,7 +12,7 @@ REPLACE=(
  "s|^kibana_index:.*$|kibana_index: \"$KIBANA_INDEX\"|;"
  "s|^default_app_id:.*$|default_app_id: \"$DEFAULT_APP_ID\"|;"
  "s|^request_timeout:.*$|request_timeout: $REQUEST_TIMEOUT|;"
- "s|^shard_timeout:.*$|shard_timeout: $REQUEST_TIMEOUT|;"
+ "s|^shard_timeout:.*$|shard_timeout: $SHARD_TIMEOUT|;"
  "s|^verify_ssl:.*$|verify_ssl: $VERIFY_SSL|;"
 )
 
