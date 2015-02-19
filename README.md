@@ -10,8 +10,9 @@ Kibana automatically proxies all requests from the dashboard to the elasticsearc
 Available Kibana Versions:
 
 `4.0.0-BETA2`
-`4.0.0-BETA3`
-`4.0.0-RC1`, `latest`
+`4.0.0-BETA3`  
+`4.0.0-RC1`  
+`4.0.0`, `latest`
 
 ## Run
 To connect to an elasticsearch server on the docker host, run this:
@@ -19,6 +20,19 @@ To connect to an elasticsearch server on the docker host, run this:
 ```bash
 docker run -e ELASTICSEARCH=http://172.17.42.1:9200 -P marcbachmann/kibana4
 ```
+
+## Upgrade
+
+### from 4.0.0-RC1 to 4.0.0
+
+There was a bug in the automatic config migration of Kibana 4.0.0-RC1.  
+If you're migrating from v4.0.0-RC1 to v4.0.0, you have to execute the following command.
+
+```
+BODY=`curl -XGET 'localhost:9200/.kibana/config/4.0.0-rc1/_source'`;
+curl -XPUT "localhost:9200/.kibana/config/4.0.0" -d "$BODY" && curl -XDELETE "localhost:9200/.kibana/config/4.0.0-rc1"
+```
+
 
 ## Options
 Most configuration variables can be set using environment variables.
