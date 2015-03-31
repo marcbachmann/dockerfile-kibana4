@@ -9,10 +9,11 @@ Kibana automatically proxies all requests from the dashboard to the elasticsearc
 
 Available Kibana Versions:
 
-`4.0.0-BETA2`
+`4.0.0-BETA2`  
 `4.0.0-BETA3`  
 `4.0.0-RC1`  
-`4.0.0`, `latest`
+`4.0.0`  
+`4.0.1`, `latest`
 
 ## Run
 To connect to an elasticsearch server on the docker host, run this:
