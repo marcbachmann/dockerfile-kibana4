@@ -13,7 +13,8 @@ Available Kibana Versions:
 `4.0.0-BETA3`  
 `4.0.0-RC1`  
 `4.0.0`  
-`4.0.1`, `latest`
+`4.0.1`  
+`4.0.2`, `latest`
 
 ## Run
 To connect to an elasticsearch server on the docker host, run this:
