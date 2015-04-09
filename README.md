@@ -49,3 +49,14 @@ REQUEST_TIMEOUT = 60
 SHARD_TIMEOUT   = 30000
 VERIFY_SSL      = true
 ```
+
+### Linking Elasticsearch Container
+
+When running Elasticsearch as a docker container, we can link Kibana to Elasticsearch by defining a link named _elasticsearch_:
+
+```
+docker run -d --name myElasticSearch elasticsearch
+docker run -d --link myElasticSearch:elasticsearch -P marcbachmann/kibana4
+```
+
+**Note:** Elasticsearch needs to expose the default http port 9200
