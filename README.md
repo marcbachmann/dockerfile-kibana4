@@ -49,3 +49,13 @@ REQUEST_TIMEOUT = 60
 SHARD_TIMEOUT   = 30000
 VERIFY_SSL      = true
 ```
+
+### Linking an Elasticsearch Container
+
+When you're running Elasticsearch in a separate docker container, you can automatically link to it by naming the linked container `elasticsearch`. By doing so the `ELASTICSEARCH` variable gets automatically set. To link it correctly, it needs to expose the port 9200.
+
+e.g.
+```
+docker run -d --name myElasticSearch elasticsearch
+docker run -d --link myElasticSearch:elasticsearch -P marcbachmann/kibana4
+```
