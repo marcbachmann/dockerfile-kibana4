@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check for linked elasticsearch container
+# and set ELASTICSEARCH url based on host & port
+if [[ "$ELASTICSEARCH_PORT_9200_TCP_ADDR" != "" ]]; then
+	ELASTICSEARCH=http://$ELASTICSEARCH_PORT_9200_TCP_ADDR:$ELASTICSEARCH_PORT_9200_TCP_PORT
+fi
+
 export ELASTICSEARCH=${ELASTICSEARCH:-http://172.17.42.1:9200}
 export KIBANA_INDEX=${KIBANA_INDEX:-.kibana}
 export DEFAULT_APP_ID=${DEFAULT_APP_ID:-discover}
