@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:jessie
 MAINTAINER Marc Bachmann <marc.brookman@gmail.com>
 
 RUN apt-get update -q && \
