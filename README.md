@@ -16,7 +16,7 @@ Available Kibana Versions:
 `4.0.1`  
 `4.0.2`  
 `4.1.0`  
-`4.1.1`
+`4.1.1`  
 `4.1.4`, `latest`
 
 ## Run
